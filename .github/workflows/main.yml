@@ -17,8 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add funny comment
-        uses: jgetzel/Lab5_PartyHorn@v1
+        uses: jgetzel/Lab5_PartyHorn@main
         id: FunnyComment
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
           GIPHY_TOKEN: ${{secrets.GIPHY_TOKEN}}
           comment_type: 'gif'
